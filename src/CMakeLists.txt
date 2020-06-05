@@ -4,3 +4,4 @@ project(src)
 
 add_subdirectory(test)
 add_subdirectory(leetcode53)
+add_subdirectory(leetcode54)
