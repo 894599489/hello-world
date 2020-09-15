@@ -23,12 +23,17 @@
 using namespace std;
 class Solution {
     bool isPalindrome(const string_view &s) {
+        if (s.empty()) {
+            return true;
+        }
         size_t i = 0;
         size_t j = s.size() - 1;
         while (i < j) {
             if (s[i] != s[j]) {
                 return false;
             }
+            ++i;
+            --j;
         }
         return true;
     }
@@ -52,7 +57,7 @@ public:
 
 int main()
 {
-    auto ans = Solution().longestPalindrome("babad");
+    auto ans = Solution().longestPalindrome("");
     cout << ans << endl;
     return 0;
 }
